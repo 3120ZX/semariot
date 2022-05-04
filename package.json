@@ -1,0 +1,27 @@
+{
+  "name": "semariot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon run server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3120ZX/semariot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/3120ZX/semariot/issues"
+  },
+  "homepage": "https://github.com/3120ZX/semariot#readme",
+  "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
