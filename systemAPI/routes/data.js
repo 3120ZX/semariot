@@ -68,6 +68,7 @@ router.get('/parkingData', async (req,res) =>{
                     records2[records2.length-1].car7,
                     records2[records2.length-1].car8
                 ]
+                green = GRavailability.filter(value => value == false).length;
                 red = GRavailability.filter(value => value == true).length;
 
             parkingData.find().then(function(recordsp){
@@ -78,6 +79,11 @@ router.get('/parkingData', async (req,res) =>{
             )
             });
         });
+    });
+});
+router.get('/PDtest', async (req,res) =>{
+    parkingData.find().then(function(recordsp){
+        res.send(JSON.stringify(recordsp[recordsp.length-1].search));
     });
 });
 //////Sensor 1
