@@ -20,6 +20,7 @@ mongoose.connection.on('error', err => {
 //Middleware
 app.use(express.json());
 //Route Middlewares
+app.use(cors());
 app.options('*', cors());
 app.use('/api/telemetry', postData);
 

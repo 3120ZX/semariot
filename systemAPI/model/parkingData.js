@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const GPIOSchema = new mongoose.Schema({
-    parkingAvailable:{
+    search:{
         type: Number,
         required:true,
     },
