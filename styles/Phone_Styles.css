@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist');
 body {
-    background-color: #E5E5E5;
+    background-color: #FFFFFF;
 }
 
 .loc_box {
     /*---Box---*/
     position: fixed;
+    line-height:2em;
     width: 82%;
     height: 4%;
     padding: 3% 5% 3% 5%;
@@ -16,30 +18,33 @@ body {
     left: 3%;
     right: 3%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     /*---Content---*/
-    font-family: 'Roboto';
+    font-family: 'Urbanist';
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 2.7rem;
     text-align: left;
     align-items: center;
     color: #000000;
 }
 
+
 .mini_status_box {
     position: fixed;
-    width: 16%;
-    height: 8%;
-    padding: 1% 1% 0% 1%;
-    left: 75%;
+    width: 170px;
+    height: 170px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    left: 5%;
     top: 13%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     display: grid;
     grid: 50% 50%/50% 50%;
     grid-gap: 0px;
+    z-index: -1;
 }
 
 .mini_status_box>div {
@@ -49,8 +54,11 @@ body {
     font-size: 2vh;
     color: #000000;
     text-align: center;
+    vertical-align:middle;
 }
-
+.mini_status_box>div>img{
+    vertical-align:middle;
+}
 .status_box {
     /*Box*/
     position: absolute;
@@ -61,21 +69,43 @@ body {
     right: 3%;
     bottom: 10%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.25);
     border-radius: 40px;
     /*Content*/
     display: grid;
     grid: 33% 33% 33%/20% 70% 10%;
     grid-gap: 0px;
-}
-
-.status_box>div {
-    font-family: 'Roboto';
-    font-weight: bold;
     font-size: 2.3vh;
-    color: #000000;
+    color: #444444;
+    font-family: 'Urbanist';
+    font-weight: bold;
+}
+.right_ud{
+    position:absolute;
+    right: 50px;
+    transform: rotate(180deg);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
+.dropdown{
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    left: 0; 
+    padding: 3% 5% 3% 5%;
+    z-index: 1;
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 20px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 40px 40px;
+    width: 100%;
+}
+.black{
+    color:#000000;
+}
 
 /*Map of the parking lot*/
 
@@ -94,38 +124,31 @@ body {
     position: absolute;
     width: 22%;
     height: auto;
-    top: 0%;
-    left: 11.9%;
+
 }
 
 #spot2 {
     position: absolute;
     width: 22%;
     height: auto;
-    top: 0%;
-    left: 26.55%;
+
 }
 
 #spot3 {
     position: absolute;
     width: 22%;
     height: auto;
-    top: 0%;
-    left: 41.2%;
 }
 
 #spot4 {
     position: absolute;
     width: 22%;
     height: auto;
-    top: 0%;
-    left: 55.85%;
+
 }
 
 #spot5 {
     position: absolute;
     width: 22%;
     height: auto;
-    top: 0%;
-    left: 70.55%;
 }

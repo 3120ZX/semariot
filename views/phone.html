@@ -4,57 +4,62 @@
     <title>ParkHere</title>
     <link rel='stylesheet' href=Phone_Styles.css>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="phone.js" defer></script>
 </head>
 
 <body>
-    <div class=loc_box>
-        Miniatur Tempat Parkir
+    <div class=loc_box id="dropdown-btn">
+        <span id="selected">Binus ASO Alam Sutera GF</span>
+        <span class="right_ud" id="arrow"><img src='button-trig.svg' width="100%" height="100%"/></span>
+        <div id="dropdown" class="dropdown">
+            Binus ASO Alam Sutera LG
+        </div>
     </div>
     <div class=mini_status_box>
+        <div>
+            <img src="check.svg" height=80% width=80%/>
+            <br>
+        </div>
         <div class=empty>
         </div>
         <div>
-            <img src="check.svg" height=80% width=100%>
+            <img src="error.svg" height=80% width=80%/>
             <br>
         </div>
         <div class=searching>
         </div>
-        <div>
-            <img src="error.svg" height=80% width=100%>
-            <br>
-        </div>
     </div>
     <div class=status_box>
         <div>
-            <img src="check.svg" height=80% width=100%>
+            <img src="check.svg" height=80% width=80%/>
             <br>
         </div>
         <div>
             Available
         </div>
-        <div class=empty>
+        <div class="empty black">
         </div>
         <div>
-            <img src="error.svg" height=80% width=100%>
+            <img src="error.svg" height=80% width=80%/>
             <br>
         </div>
         <div>
             Searching
         </div>
-        <div class=searching>
+        <div class="searching black">
         </div>
         <div>
-            <img src="remove.svg" height=80% width=100%>
+            <img src="remove.svg" height=80% width=80%/>
             <br>
         </div>
         <div>
             Occupied
         </div>
-        <div class=occupied>
+        <div class="occupied black">
         </div>
     </div>
-    <div class=map>
-        <img src="map.png" width="100%" height="100%">
+    <div class=map id="map">
+        <img id="img-map" src="map1.png" width="100%" height="100%"/>
         <div id="spot1"></div>
         <div id="spot2"></div>
         <div id="spot3"></div>

@@ -1,151 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist');
 body {
-    background-color: #E5E5E5;
+    margin:0;
+    background-color: #EEEEEE;
 }
+.container_contents{
 
-.loc_box {
-    /*---Box---*/
-    position: fixed;
-    /*width: 31%;
-    height: 10%;*/
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 1000px;
+}
+.container_legend{
     width: 27%;
-    height: 6%;
-    padding: 1% 2% 1% 2%;
+    height: 80%;
+    padding: 2% ;
     left: 3%;
     top: 5%;
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #444444;
+    box-shadow:  0px 4px 20px 2px rgba(0, 0, 0, 0.25);
+    font-family: 'Urbanist';
+    /*margin: 15rem 8rem;*/
+    margin-left: 2rem;
     border-radius: 24px;
-    /*---Content---*/
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 3.3vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.QR_box{
+    align-self: center;
+}
+.loc_box{
+    font-family: 'Urbanist';
+    text-align: start;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+.map{
+    width: 50vw;
+    text-align: center;
+    font-weight: 700;
+}
+
+span{
+    margin-left: 20px;
+    vertical-align: middle;
+    font-size: 1em;
+}
+.icon-text{
+    width: 100%;
     display: flex;
     align-items: center;
-    color: #000000;
 }
-
-.QR_box {
-    /*---Box---*/
-    position: fixed;
-    /*width: 29%;
-    height: 49%;*/
-    width: 25%;
-    height: 41%;
-    padding: 2% 2% 2% 2%;
-    left: 4%;
-    top: 19%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    /*---Content---*/
-    text-align: center;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 3.3vh;
-    color: #000000;
+.legend-text{
+    font-family: 'Urbanist';
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
-
-.status_box {
-    /*Box*/
-    position: fixed;
-    width: 29%;
-    height: 15%;
-    padding: 2% 1% 2% 1%;
-    left: 3%;
-    top: 72%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    /*Content*/
-    display: grid;
-    grid: 33% 33% 33%/20% 70% 10%;
-    grid-gap: 0px;
+.legend-text:last-child{
+    margin-bottom: 0;
 }
-
-.status_box>div {
-    line-height: 160%;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 2.5vh;
-    color: #000000;
+.status_box{
+    width: 100%;
+    font-family: 'Urbanist';
+    font-weight: 400;
+    font-size: 2.3em;
+    color: #444444;
 }
-
-.mini_status_box {
-    /*Box*/
-    position: fixed;
-    width: 4%;
-    height: 10%;
-    padding: 1% 1% 1% 1%;
-    left: 90%;
-    top: 5%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 24px;
-    display: grid;
-    grid: 50% 50%/50% 50%;
-    grid-gap: 0px;
+.black{
+    color:#000000;
 }
-
-.mini_status_box>div {
-    line-height: 170%;
-    font-family: 'Roboto';
-    font-weight: bold;
-    font-size: 2.3vh;
-    color: #000000;
-    text-align: center;
+.mini_status_box{
+    box-sizing: border-box;
+    margin-top: 100px;
+    margin-right: 100px;
+    padding: 1.7rem;
+    align-self: flex-start;
+    width: 170px;
+    height:170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px 2px rgba(0, 0, 0, 0.125);
+    border-radius: 30px;
+    font-size: 1.7em;
+    vertical-align: center;
 }
-
-
-/*Map of the parking lot*/
-
-.map {
-    position: fixed;
-    width: 55%;
-    height: auto;
-    top: 20%;
-    left: 40%;
+.map{
+    position: relative;
 }
-
-
-/*Parking spot*/
-
-#spot1 {
+.map > img{
+    position: relative;
+}
+.spot{
+    position:absolute;
+    width: 9%;
+}
+.nav_ud{
     position: absolute;
-    width: 22%;
-    height: auto;
-    top: 0%;
-    left: 11.9%;
+    height: 200px;
+    width: 185px;
 }
-
-#spot2 {
-    position: absolute;
-    width: 22%;
-    height: auto;
-    top: 0%;
-    left: 26.55%;
+.left_ud{
+    left: 50px;
 }
-
-#spot3 {
-    position: absolute;
-    width: 22%;
-    height: auto;
-    top: 0%;
-    left: 41.2%;
+.right_ud{
+    right: 50px;
 }
-
-#spot4 {
-    position: absolute;
-    width: 22%;
-    height: auto;
-    top: 0%;
-    left: 55.85%;
-}
-
-#spot5 {
-    position: absolute;
-    width: 22%;
-    height: auto;
-    top: 0%;
-    left: 70.55%;
+@media (max-width:900px) {
+    .container_contents{
+        display: flex;
+        flex-direction: column;
+    }
 }
