@@ -71,10 +71,10 @@ const parkInfo = async ()=>{
     searching[1].innerHTML = spotInfo['searching']
 }
 const loadPicture = () =>{
-    parkInfo()
-    parkStatus()
-    //setInterval(parkInfo,5000)
-    //setInterval(parkStatus,5000)
+    // parkInfo()
+    // parkStatus()
+    setInterval(parkInfo,5000)
+    setInterval(parkStatus,5000)
 }
 loadPicture()
 function add(){
