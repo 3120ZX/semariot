@@ -73,8 +73,8 @@ const parkInfo = async ()=>{
 const loadPicture = () =>{
     // parkInfo()
     // parkStatus()
-    setInterval(parkInfo,5000)
-    setInterval(parkStatus,5000)
+    setInterval(parkInfo,1500)
+    setInterval(parkStatus,1500)
 }
 loadPicture()
 function add(){
