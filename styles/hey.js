@@ -38,19 +38,21 @@ const parkStatus = async ()=>{
                 parks.children[index+1].style.top= `${top}px`
                 parks.children[index+1].style.bottom= null
             }
-            nav_btn[0].style.cursor='auto'
-            nav_btn[1].style.cursor='pointer'
-            nav_btn[1].addEventListener('click', add)
-        }
-        else{
-            parks.children[0].src = 'map2.png'
-            for (let index=0;index<6;index++){
-                parks.children[index+1].style.top= null
-                parks.children[index+1].style.bottom= `${top}px`
-            }
             nav_btn[0].style.cursor='pointer'
             nav_btn[1].style.cursor='auto'
             nav_btn[0].addEventListener('click', add)
+            nav_btn[1].removeEventListener('click', add)
+        }
+        else{
+            parks.children[0].src = 'map2.png'
+            for (let index=4;index<6;index++){
+                parks.children[index+1].style.top= null
+                parks.children[index+1].style.bottom= `${top}px`
+            }
+            nav_btn[0].style.cursor='auto'
+            nav_btn[1].style.cursor='pointer'
+            nav_btn[0].removeEventListener('click', add)
+            nav_btn[1].addEventListener('click', add)
         }
     }
     //console.log(parks)
