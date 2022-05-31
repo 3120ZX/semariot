@@ -36,19 +36,15 @@ const parkStatus = async ()=>{
         }
         //parks.children[index+1].style.left= `${left+interval*index}px`
         parks.children[index+1].style.left= `${left+interval*index}vw`
+        for (let index=0;index<4;index++){
+            parks.children[index+1].style.top= `${top}px`
+            parks.children[index+1].style.bottom= null
+        }
         if (level%2 === 0 ){
             parks.children[0].src = 'map1.png'
-            for (let index=0;index<4;index++){
-                parks.children[index+1].style.top= `${top}px`
-                parks.children[index+1].style.bottom= null
-            }
         }
         else{
             parks.children[0].src = 'map2.png'
-            for (let index=0;index<4;index++){
-                parks.children[index+1].style.top= null
-                parks.children[index+1].style.bottom= `${top}px`
-            }
         }
     }
     //console.log(parks)
