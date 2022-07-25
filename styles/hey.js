@@ -5,6 +5,7 @@ const empty = document.getElementsByClassName('empty')
 const searching = document.getElementsByClassName('searching')
 const occupied = document.getElementsByClassName('occupied')
 const nav_btn = document.getElementsByClassName('nav_ud')
+const floor_name =document.getElementsByClassName('loc_box')
 const apiInfo = "http://167.172.69.56:3000/api/telemetry/parkingData"
 
 const parkStatus = async ()=>{
@@ -33,6 +34,7 @@ const parkStatus = async ()=>{
         //parks.children[index+1].style.left= `${left+interval*index}px`
         parks.children[index+1].style.left= `${left+interval*index}vw`
         if (level%2 === 0 ){
+            floor_name[0].innerHTML ="Binus ASO Alam Sutera 1st Floor"
             parks.children[0].src = 'map1.png'
             for (let index=0;index<6;index++){
                 parks.children[index+1].style.top= `${top}px`
@@ -44,6 +46,7 @@ const parkStatus = async ()=>{
             nav_btn[1].removeEventListener('click', add)
         }
         else{
+            floor_name[0].innerHTML ="Binus ASO Alam Sutera 2nd Floor"
             parks.children[0].src = 'map2.png'
             for (let index=4;index<6;index++){
                 parks.children[index+1].style.top= null
